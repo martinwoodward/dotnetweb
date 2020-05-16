@@ -25,6 +25,7 @@
     "forwardPorts": [5000, 5001],
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
+        "gitlens.gitExplorer.enabled": false,
         "files.exclude": {
             "**/CODE_OF_CONDUCT.md": true,
             "**/LICENSE": true
