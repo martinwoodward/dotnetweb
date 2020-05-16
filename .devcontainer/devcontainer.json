@@ -1,5 +1,13 @@
 {
-    "name": "Codespaces Node.js Starter",
+    "name": "Simple C#",
+    "build": {
+      "dockerfile": "Dockerfile",
+      "args": {
+        "USERNAME": "vscode",
+        "INSTALL_NODE": "false",
+        "NODE_VERSION": "lts/*",
+        "INSTALL_AZURE_CLI": "true"
+    }    
     "extensions": [
         "ms-dotnettools.csharp",
         "github.github-vscode-theme",
@@ -11,9 +19,11 @@
         "vscode-icons-team.vscode-icons",
         "visualstudioexptteam.vscodeintellicode"
     ],
+    "remoteUser": "vscode",
     "dockerFile": "Dockerfile",
+    "forwardPorts": [5000, 5001],
     "settings": {
-        "terminal.integrated.shell.linux": "/usr/bin/zsh",
+        "terminal.integrated.shell.linux": "/bin/bash",
         "files.exclude": {
             "**/CODE_OF_CONDUCT.md": true,
             "**/LICENSE": true
