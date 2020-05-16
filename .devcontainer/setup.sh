@@ -3,17 +3,13 @@ export DEBIAN_FRONTEND=noninteractive
 
 ## update and install some things we should probably have
 apt-get update
-
 apt-get -y install --no-install-recommends apt-utils dialog 2>&1
-
-
 apt-get install -y \
   curl \
   git \
   gnupg2 \
   jq \
   sudo \
-  tzdata \
   openssh-client \
   less \
   iproute2 \
@@ -21,11 +17,6 @@ apt-get install -y \
   apt-transport-https \
   gnupg2 \
   lsb-release
-
-# set your timezone
-ln -fs /usr/share/zoneinfo/UCT /etc/localtime
-#ln -fs /usr/share/zoneinfo/GB /etc/localtime
-dpkg-reconfigure --frontend noninteractive tzdata
 
 # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
 groupadd --gid $USER_GID $USERNAME
