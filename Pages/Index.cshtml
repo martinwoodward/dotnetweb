@@ -2,30 +2,11 @@
 @model IndexModel
 @{
     ViewData["Title"] = "ASP.NET Core";
+    var asciiArt = AsciiArt.CreateDotnetMona("Would you like a Cup<T>?");
 }
 <div class="cli">
     <div class="cli-example">        
-         MMM.           .MMM                                                   (O)
-         MMMMMMMMMMMMMMMMMMM                                                   ||
-         MMMMMMMMMMMMMMMMMMM      _____________                         .DDDDDDDDDDDDDDDD.
-        MMMMMMMMMMMMMMMMMMMMM    |             |                     .DDDDDDDDDDDDDDDDDDDDDD.
-       MMMMMMMMMMMMMMMMMMMMMMM   | Hello World |                  .DDDDDDDDDDDDDDDDDDDDDDDDDDDD.
-      MMMMMMMMMMMMMMMMMMMMMMMM   |_   _________|                 .'DDDDDDDDDDDDDDDDDDDDdDD'  DDDD.
-      MMMM::- -:::::::- -::MMMM    |/                            :  .DDDDD.'.DDDDDDDDD         DDD.
-       MM~:~ 00~:::::~ 00~:~MM                                   :    _            __        .DDDDD.
-  .. MMMMM::.00:::+:::.00::MMMMM ..                             .:    0            00        .DDDDD.
-        .MM::::: ._. :::::MM.                                  .DDD       ^                 .DDDDD.
-           MMMM;:::::;MMMM                                     .DDDD.  .DDDDD.          .DDDDDDDDDDD.
-    -MM        MMMMMMM                                         .DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD'  .DDDDD.
-    ^  M+     MMMMMMMMM                                     .DDDDDDDDDDD#NET#DDDDDDDDDDDdDDDDD'     .DDDDD.
-        MMMMMMM MM MM MM                                 .DDDDDD.    .DdDDDDDDDDDDDDDDDDdDDDD.      .DDDDDDDD.
-             MM MM MM MM                              .DD'DDDDDD     DDDDDD. .DDDDDDDD....DD.         .DDDDD.
-             MM MM MM MM                            .dDDDDb       .DDDD'D.               .D'DDDD.
-          .~~MM~MM~MM~MM~~.                                     .DDDDDD'D.               .D'DDDDDDD.
-       ~~~~MM:~MM~~~MM~:MM~~~~                               .DDDDDDDDD'D.               'D'DDDDDDDDD.
-      ~~~~~~==~==~~~==~==~~~~~~                            .DDDDDDDDDDD'D.               'D'DDDDDDDDDDD.
-       ~~~~~~==~==~==~==~~~~~~                            .DDDDDDDDDDDDD.                 D'DDDDDDDDDDD.
-           :~==~==~==~==~~                                  .DDDDDD.
+@asciiArt
     </div>
 </div>
 
