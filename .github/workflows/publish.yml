@@ -4,7 +4,7 @@ name: publish
 on:
   push:
     tags:
-    - prod/*
+    - prod
 
 jobs:
   build:
