@@ -1,12 +1,18 @@
-name: "Code scanning"
+name: "Code scan"
 
 on:
   push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+  # Re-run scan every Monday morning with latest CodeQL queries
   schedule:
-    - cron: '0 15 * * 5'
+    - cron: '0 4 * * 1'
 
 jobs:
-  CodeQL-Build:
+  CodeQL-Scan:
 
     strategy:
       fail-fast: false
