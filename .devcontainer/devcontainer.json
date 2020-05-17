@@ -1,5 +1,5 @@
 {
-    "name": "Simple C#",
+    "name": "ASP.NET",
     "build": {
       "dockerfile": "Dockerfile",
       "args": {
