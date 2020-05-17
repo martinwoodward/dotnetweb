@@ -11,6 +11,17 @@ namespace dotnetweb.Pages
 {
     public class IndexModel : PageModel
     {
+        public string[] Messages {
+            get {
+                return new string[] {
+                    "Hello World!",
+                    "Would you like a Cup<T>?",
+                    ".NET all the things!",
+                    "Would you like to play a game?"
+                };
+            }
+        }
+
         private readonly ILogger<IndexModel> _logger;
 
         public IndexModel(ILogger<IndexModel> logger)

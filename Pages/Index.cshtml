@@ -2,7 +2,8 @@
 @model IndexModel
 @{
     ViewData["Title"] = "ASP.NET Core";
-    var asciiArt = AsciiArt.CreateDotnetMona("Would you like a Cup<T>?");
+    var message = Model.Messages[1];
+    var asciiArt = AsciiArt.CreateDotnetMona(message);
 }
 <div class="cli">
     <div class="cli-example">        
