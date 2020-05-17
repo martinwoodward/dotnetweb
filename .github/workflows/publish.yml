@@ -1,0 +1,39 @@
+name: Publish
+
+# Only run when code pushed to master
+on:
+  push:
+    tags:
+    - prod/*
+  
+
+jobs:
+  azure:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - run: env
+    
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: '3.1.100'
+      
+    - name: Build with dotnet
+      run: dotnet build --configuration Release
+      
+    - name: dotnet publish
+      run: |
+        dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/dotnetweb 
+        
+    - name: 'Deploy to https://dotnetmona.azurewebsites.net/'
+      uses: azure/webapps-deploy@v2
+      with: 
+        app-name: dotnetmona
+        # Publish directly to Production for pushes into master
+        publish-profile: ${{ secrets.azureWebAppPublishProfile }}
+        package: ${{env.DOTNET_ROOT}}/dotnetweb 
+      
