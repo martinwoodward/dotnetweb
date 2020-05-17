@@ -25,8 +25,8 @@
     "settings": {
         "terminal.integrated.shell.linux": "/bin/bash",
         "files.exclude": {
-            "**/CODE_OF_CONDUCT.md": true,
             "**/.gitignore": true,
+            "**/SECURITY.md": true,
             "**/LICENSE": true
         }
     }
