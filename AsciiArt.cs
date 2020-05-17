@@ -61,7 +61,11 @@ namespace dotnetweb
                art[4] = art[4].ReplaceAt(SPEECH_COL,"| " + message + " |");
                art[5] = art[5].ReplaceAt(SPEECH_COL,"|_   " + new String('_',message.Length -2) + "|");
                art[6] = art[6].ReplaceAt(SPEECH_COL + 2,"|/");
-           } 
+           }
+           else
+           {
+               return null;
+           }
             
            return String.Join('\n',art);
        }
