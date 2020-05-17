@@ -1,3 +1,5 @@
-# dotnetweb
+![CI Build](https://github.com/martinwoodward/dotnetweb/workflows/CI/badge.svg?branch=master&event=push)
 
-Super simple .NET Core website
+# Simple .NET Core website
+
+Simple ASP.NET Core website using Razorpages.
