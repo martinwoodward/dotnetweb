@@ -3,8 +3,8 @@ name: publish
 # Only run when code pushed to master
 on:
   push:
-    branches:
-    - master
+    tags:
+    - prod/*
 
 jobs:
   build:
