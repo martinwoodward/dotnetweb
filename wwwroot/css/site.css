@@ -1,5 +1,15 @@
-﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
-for details on configuring this project to bundle and minify static web assets. */
+
+.cli-example {
+  font-family: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  font-weight: 100;
+  font-size: 12px;
+  white-space: pre;
+  text-align: left;
+  padding: 30px;
+  background: #032F62;
+  border-radius: 6px;
+  color: #F1F8FF;
+}
 
 a.navbar-brand {
   white-space: normal;
