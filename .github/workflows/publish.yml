@@ -7,7 +7,7 @@ on:
     - prod/*
 
 jobs:
-  build:
+  azure:
 
     runs-on: ubuntu-latest
 
