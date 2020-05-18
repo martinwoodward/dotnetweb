@@ -2,7 +2,6 @@
 @model IndexModel
 @{
     ViewData["Title"] = "ASP.NET Core";
-
     var message = Request.QueryString.ToString();
     if (String.IsNullOrEmpty(message))
     {
