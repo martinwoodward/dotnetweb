@@ -2,7 +2,7 @@
 @model IndexModel
 @{
     ViewData["Title"] = "ASP.NET Core";
-    var message = Request.QueryString.ToString();
+    var message = Request.Query["m"];
     if (String.IsNullOrEmpty(message))
     {
         message = Model.Messages[1];
@@ -11,7 +11,7 @@
 }
 <div class="cli">
     <div class="cli-example">        
-@Html.Raw(asciiArt)
+@asciiArt
     </div>
 </div>
 
