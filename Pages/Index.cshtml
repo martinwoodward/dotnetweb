@@ -2,7 +2,11 @@
 @model IndexModel
 @{
     ViewData["Title"] = "ASP.NET Core";
-    var message = Model.Messages[0];
+    var message = Request.QueryString.ToString();
+    if (String.IsNullOrEmpty(message))
+    {
+        message = Model.Messages[1];
+    }
     var asciiArt = AsciiArt.CreateDotnetMona(message);
 }
 <div class="cli">
