@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using dotnetweb;
 
+
 namespace dotnetweb.Pages
 {
     public class IndexModel : PageModel
@@ -14,7 +15,7 @@ namespace dotnetweb.Pages
         public string[] Messages {
             get {
                 return new string[] {
-                    "How's about ye!",
+                    "Hello DOES!",
                     "Would you like a Cup<T>?",
                     ".NET all the things!",
                     "Would you like to play a game?"
