@@ -5,6 +5,7 @@ on:
   push:
     tags:
     - prod/*
+  workflow_dispatch:
 
 jobs:
   azure:
