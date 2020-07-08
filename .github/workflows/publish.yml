@@ -10,10 +10,7 @@ on:
       releaseType:
         description: 'Where to release (dev, qa or prod)?'     
         required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
-    
+        default: 'prod'
 
 jobs:
   azure:
