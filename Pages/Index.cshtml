@@ -5,7 +5,7 @@
     var message = Request.Query["m"];
     if (String.IsNullOrEmpty(message))
     {
-        message = Model.Messages[0];
+        message = Model.Messages[1];
     }
     var asciiArt = AsciiArt.CreateDotnetMona(message);
 }
