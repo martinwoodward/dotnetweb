@@ -2,9 +2,7 @@ name: Publish
 
 # Only run when code pushed to master
 on:
-  push:
-    tags:
-    - prod/*
+  release: 
   workflow_dispatch:
     inputs:
       releaseType:
