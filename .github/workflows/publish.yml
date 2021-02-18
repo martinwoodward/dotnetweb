@@ -42,7 +42,7 @@ jobs:
     - name: 'Deploy to https://dotnetmona.azurewebsites.net/'
       uses: azure/webapps-deploy@v2
       with: 
-        app-name: dotnetmona
+        app-name: dotnetmona-staging
         # Publish directly to Production for pushes into master
         publish-profile: ${{ secrets.azureWebAppPublishProfile }}
         package: ${{env.DOTNET_ROOT}}/dotnetweb 
