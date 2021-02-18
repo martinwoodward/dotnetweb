@@ -1,8 +1,9 @@
 name: Publish
 
-# Only run when code pushed to master
+# Run on new release creation or when manually triggered
 on:
-  release: 
+  release:
+    types: [published]
   workflow_dispatch:
     inputs:
       releaseType:
