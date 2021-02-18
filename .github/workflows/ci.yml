@@ -15,6 +15,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
+        donet: [5.0.103, 3.1.100]
 
     runs-on: ${{ matrix.os }}
 
