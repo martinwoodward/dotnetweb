@@ -5,7 +5,9 @@
     var message = Request.Query["m"];
     if (String.IsNullOrEmpty(message))
     {
-        message = Model.Messages[0];
+        //message = Model.Messages[0];
+        // set message to a random message
+        message = Model.Messages[new Random().Next(Model.Messages.Length)];
     }
     var asciiArt = AsciiArt.CreateDotnetMona(message);
 }
