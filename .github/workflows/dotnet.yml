@@ -24,3 +24,14 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - uses: minicli/action-contributors@v3
+      name: "Update a projects CONTRIBUTORS file"
+      env:
+        CONTRIB_REPOSITORY: 'martinwoodward/dotnetweb'
+        CONTRIB_OUTPUT_FILE: 'CONTRIBUTORS.md'
+    - name: Commit changes
+      uses: test-room-7/action-update-file@v1
+      with:
+        file-path: 'CONTRIBUTORS.md'
+        commit-msg: Update Contributors
+        github-token: ${{ secrets.GITHUB_TOKEN }}
